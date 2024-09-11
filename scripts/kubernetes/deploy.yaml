@@ -23,7 +23,7 @@ spec:
     spec:
       containers: 
       - name: video-streaming
-        image: $CONTAINER_REGISTRY/video-streaming:$VERSION
+        image: sit722w07.azurecr.io/video-streaming:$VERSION
         imagePullPolicy: IfNotPresent
         env:
         - name: PORT
