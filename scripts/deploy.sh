@@ -14,7 +14,7 @@
 #
 
 set -u # or set -o nounset
-: "$CONTAINER_REGISTRY"
-: "$VERSION"
+: "${CONTAINER_REGISTRY:?Environment variable CONTAINER_REGISTRY must be set}"
+: "${VERSION:?Environment variable VERSION must be set}"
 
 envsubst < ./scripts/kubernetes/deploy.yaml | kubectl apply -f -
